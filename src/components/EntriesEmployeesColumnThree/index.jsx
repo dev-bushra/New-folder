@@ -37,11 +37,11 @@ const EntriesEmployeesColumnThree = (props) => {
     <>
       <div className={props.className}>
         <div className="flex flex-col gap-6 items-start justify-center w-full">
-          <div className="flex md:flex-col flex-row gap-6 h-[60px] md:h-auto items-center justify-start w-full">
+          <div className="flex md:flex-col flex-row gap-0 h-[60px] md:h-auto items-center justify-start">
             <div className="flex md:flex-1 md:flex-col flex-row gap-9 items-center justify-start w-auto md:w-full">
               <div className="flex flex-col items-center justify-start w-auto">
                 <Text
-                  className="sm:text-2xl md:text-[26px] text-[28px] text-blue_gray-700 w-auto"
+                  className="sm:text-2xl md:text-[16px] text-[16px] text-blue_gray-700 w-auto"
                   size="txtInterMedium28"
                 >
                   {props?.title}
@@ -78,7 +78,7 @@ const EntriesEmployeesColumnThree = (props) => {
                     ></Input>
                   </div>
                 </div>
-                <div className="bg-white-A700 flex flex-col items-start justify-start rounded-lg w-[248px]">
+                <div className="bg-white-A700 flex flex-col items-start justify-start rounded-lg w-[280px]">
                   <div className="flex flex-col items-start justify-start p-1 rounded-lg w-full">
                     <div className="flex flex-col items-start justify-start w-auto">
                       <div className="flex flex-col items-start justify-start w-auto sm:w-full">
@@ -107,30 +107,30 @@ const EntriesEmployeesColumnThree = (props) => {
             <div className="flex flex-1 flex-col items-center justify-end w-full">
               <div className="flex flex-col items-center justify-end w-auto">
                 <Button
-                  className="bg-blue_gray-900 cursor-pointer flex items-center justify-center min-w-[234px] px-6 py-[11px] rounded-lg"
+                  className="bg-blue_gray-900 cursor-pointer flex items-center justify-center px-6 py-[11px] rounded-lg"
                   rightIcon={
                     <Img
-                      className="h-6 mb-px ml-3"
+                      className="h-4 ml-3"
                       src="images/img_plus.svg"
                       alt="plus"
                     />
                   }
                 >
-                  <div className="font-inter font-semibold sm:px-5 text-center text-lg text-white-A700">
+                  <div className="font-inter font-medium sm:px-5 text-center text-sm text-white-A700">
                     {props?.addNewProduct}
                   </div>
                 </Button>
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-start justify-between w-full">
+          <div className="flex flex-col items-start justify-between">
             <List
-              className="sm:flex-col flex-row md:gap-10 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-4 justify-between w-full"
+              className="sm:flex-col flex-row md:gap-10 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-4 justify-between"
               orientation="horizontal"
             >
-              <div className="bg-white-A700 flex flex-1 md:flex-1 flex-col items-start justify-start rounded-lg w-auto md:w-full">
-                <div className="flex flex-col items-start justify-start p-1 rounded-lg w-full">
-                  <div className="flex flex-col items-start justify-start w-[348px]">
+              <div className="bg-white-A700 flex flex-1 md:flex-1 flex-col items-start justify-start rounded-lg">
+                <div className="flex flex-col items-start justify-start p-1 rounded-lg">
+                  <div className="flex flex-col items-start justify-start w-[280px]">
                     <div className="flex flex-col gap-2 items-start justify-start w-full">
                       <div className="flex flex-col items-start justify-start px-1 w-full">
                         <Text
@@ -162,7 +162,7 @@ const EntriesEmployeesColumnThree = (props) => {
               </div>
               <div className="bg-white-A700 flex flex-1 md:flex-1 flex-col items-start justify-start rounded-lg w-auto md:w-full">
                 <div className="flex flex-col items-start justify-start p-1 rounded-lg w-full">
-                  <div className="flex flex-col items-start justify-start w-[348px]">
+                  <div className="flex flex-col items-start justify-start w-[280px]">
                     <div className="flex flex-col gap-2 items-start justify-start w-full">
                       <div className="flex flex-col items-start justify-start px-1 w-full">
                         <Text
@@ -194,7 +194,7 @@ const EntriesEmployeesColumnThree = (props) => {
               </div>
               <div className="bg-white-A700 flex flex-1 md:flex-1 flex-col items-start justify-start rounded-lg w-auto md:w-full">
                 <div className="flex flex-col items-start justify-start p-1 rounded-lg w-full">
-                  <div className="flex flex-col items-start justify-start w-[348px]">
+                  <div className="flex flex-col items-start justify-start w-[280px]">
                     <div className="flex flex-col gap-2 items-start justify-start w-full">
                       <div className="flex flex-col items-start justify-start px-1 w-full">
                         <Text
@@ -226,7 +226,7 @@ const EntriesEmployeesColumnThree = (props) => {
               </div>
               <div className="bg-white-A700 flex flex-1 md:flex-1 flex-col items-start justify-start rounded-lg w-auto md:w-full">
                 <div className="flex flex-col items-start justify-start p-1 rounded-lg w-full">
-                  <div className="flex flex-col items-start justify-start w-[348px]">
+                  <div className="flex flex-col items-start justify-start w-[280px]">
                     <div className="flex flex-col gap-2 items-start justify-start w-full">
                       <div className="flex flex-col items-start justify-start px-1 w-full">
                         <Text

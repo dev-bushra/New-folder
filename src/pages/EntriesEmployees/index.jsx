@@ -58,7 +58,7 @@ const EntriesEmployeesPage = () => {
       tableColumnHelper.accessor("employeeusernamOne", {
         cell: (info) => (
           <Text
-            className="pl-5 py-[35px] text-blue_gray-700 text-xl"
+            className="pl-5 py-[35px] text-blue_gray-700 text-sm"
             size="txtInterRegular20"
           >
             {info?.getValue()}
@@ -66,7 +66,7 @@ const EntriesEmployeesPage = () => {
         ),
         header: (info) => (
           <Text
-            className="min-w-[601px] pb-7 pl-5 pt-[31px] text-blue_gray-600 text-lg"
+            className="p-3 text-blue_gray-600 text-sm"
             size="txtInterRegular18"
           >
             Employee User Name
@@ -75,21 +75,18 @@ const EntriesEmployeesPage = () => {
       }),
       tableColumnHelper.accessor("pklnumber", {
         cell: (info) => (
-          <div className="flex flex-row sm:gap-10 items-center justify-between pr-4 py-4">
+          <div className="flex flex-row sm:gap-10 items-center justify-between p-2">
             <Text
-              className="text-blue_gray-700 text-xl"
+              className="text-blue_gray-700 text-sm"
               size="txtInterRegular20"
             >
               Designation/Role/
             </Text>
-            <div className="bg-gray-50 flex flex-col h-12 items-center justify-start my-2 p-3 rounded-lg w-12">
-              <Img className="h-5 w-5" alt="edit_One" src={info?.getValue()} />
-            </div>
           </div>
         ),
         header: (info) => (
           <Text
-            className="min-w-[689px] py-7 text-blue_gray-600 text-lg"
+            className="p-3 text-blue_gray-600 text-sm"
             size="txtInterRegular18"
           >
             Role
@@ -98,18 +95,25 @@ const EntriesEmployeesPage = () => {
       }),
       tableColumnHelper.accessor("customername", {
         cell: (info) => (
-          <div className="flex flex-row items-center justify-center sm:pr-5 pr-6 py-6">
+          <div className="flex flex-row items-center justify-end p-3">
+            <div className="bg-gray-50 cursor-pointer flex items-center justify-center mr-1.5 px-[20px] py-4 rounded-lg">
+              <Img
+                className="h-3 w-3"
+                alt="edit_One"
+                src="images/img_edit_blue_gray_200.svg"
+              />
+            </div>
             <Button
-              className="bg-gray-50 cursor-pointer flex items-center justify-center min-w-[156px] mr-3.5 px-[35px] py-3 rounded-lg"
+              className="bg-gray-50 cursor-pointer flex items-center justify-center px-[50px] py-3 rounded-lg"
               rightIcon={
                 <Img
-                  className="h-6 ml-3"
+                  className="h-3 ml-2"
                   src="images/img_location.svg"
                   alt="location"
                 />
               }
             >
-              <div className="font-medium sm:px-5 text-blue_gray-200 text-center text-lg">
+              <div className="sm:px-5 text-blue_gray-200 text-end text-sm">
                 {info?.getValue()}
               </div>
             </Button>
@@ -117,7 +121,7 @@ const EntriesEmployeesPage = () => {
         ),
         header: (info) => (
           <Text
-            className="min-w-[194px] pl-3.5 py-7 text-blue_gray-600 text-center text-lg"
+            className="p-3 text-blue_gray-600 text-sm text-right pr-20"
             size="txtInterRegular18"
           >
             Actions
@@ -552,12 +556,15 @@ const EntriesEmployeesPage = () => {
             </div>
           </Menu>
         </Sidebar>
-        <div className="flex flex-col font-inter h-[1080px] md:h-auto items-center justify-end max-w-[1588px] ml-[-24px] my-auto p-5 md:px-5 w-full z-[1]">
-          <div className="bg-gray-50 flex flex-col gap-6 h-[1060px] md:h-auto items-start justify-start p-6 sm:px-5 rounded-[24px] w-auto">
-            <EntriesEmployeesColumnThree className="bg-white-A700 flex flex-col gap-8 items-start justify-center max-w-[1524px] p-5 rounded-[16px] w-full" />
-            <div className="flex flex-col h-[803px] md:h-auto items-start justify-start max-w-[1524px] w-full">
-              <div className="bg-white-A700 flex flex-col md:h-auto items-start justify-end max-w-[1524px] p-10 sm:px-5 rounded-[16px] w-full">
-                <div className="overflow-auto w-full">
+
+        {/* Page Content */}
+        {/* overflow-hidden */}
+        <div className="flex flex-col font-inter h-screen items-center justify-start max-w-full p-5 w-full z-[1]  ">
+          <div className="bg-gray-50 flex flex-col gap-6 h-[1060px] md:h-auto items-start justify-start p-6 sm:px-5 rounded-[24px">
+            <EntriesEmployeesColumnThree className="bg-white-A700 flex flex-col gap-8 items-start justify-center p-5 rounded-[16px]" />
+            <div className="flex flex-col items-start justify-start min-w-full  ">
+              <div className="bg-white-A700 flex flex-col md:h-auto items-start justify-end p-5 sm:px-5 rounded-[16px] min-w-full">
+                <div className="min-w-full">
                   <ReactTable
                     columns={tableColumns}
                     data={tableData.current}
