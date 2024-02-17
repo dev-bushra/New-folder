@@ -78,7 +78,7 @@ const EntriesEmployeesColumnThree = (props) => {
                     ></Input>
                   </div>
                 </div>
-                <div className="bg-white-A700 flex flex-col items-start justify-start rounded-lg w-[280px]">
+                <div className="bg-white-A700 flex flex-col items-start justify-start rounded-lg w-[250px]">
                   <div className="flex flex-col items-start justify-start p-1 rounded-lg w-full">
                     <div className="flex flex-col items-start justify-start w-auto">
                       <div className="flex flex-col items-start justify-start w-auto sm:w-full">
@@ -107,16 +107,16 @@ const EntriesEmployeesColumnThree = (props) => {
             <div className="flex flex-1 flex-col items-center justify-end w-full">
               <div className="flex flex-col items-center justify-end w-auto">
                 <Button
-                  className="bg-blue_gray-900 cursor-pointer flex items-center justify-center px-6 py-[11px] rounded-lg"
+                  className="bg-blue_gray-900 cursor-pointer flex items-center justify-center px-3 py-[11px] rounded-lg"
                   rightIcon={
                     <Img
-                      className="h-4 ml-3"
+                      className="h-3 ml-1"
                       src="images/img_plus.svg"
                       alt="plus"
                     />
                   }
                 >
-                  <div className="font-inter font-medium sm:px-5 text-center text-sm text-white-A700">
+                  <div className="font-inter font-normal sm:px-0 text-center text-sm text-white-A700">
                     {props?.addNewProduct}
                   </div>
                 </Button>
@@ -130,7 +130,7 @@ const EntriesEmployeesColumnThree = (props) => {
             >
               <div className="bg-white-A700 flex flex-1 md:flex-1 flex-col items-start justify-start rounded-lg">
                 <div className="flex flex-col items-start justify-start p-1 rounded-lg">
-                  <div className="flex flex-col items-start justify-start w-[280px]">
+                  <div className="flex flex-col items-start justify-start w-[250px]">
                     <div className="flex flex-col gap-2 items-start justify-start w-full">
                       <div className="flex flex-col items-start justify-start px-1 w-full">
                         <Text
@@ -162,7 +162,7 @@ const EntriesEmployeesColumnThree = (props) => {
               </div>
               <div className="bg-white-A700 flex flex-1 md:flex-1 flex-col items-start justify-start rounded-lg w-auto md:w-full">
                 <div className="flex flex-col items-start justify-start p-1 rounded-lg w-full">
-                  <div className="flex flex-col items-start justify-start w-[280px]">
+                  <div className="flex flex-col items-start justify-start w-[250px]">
                     <div className="flex flex-col gap-2 items-start justify-start w-full">
                       <div className="flex flex-col items-start justify-start px-1 w-full">
                         <Text
@@ -194,7 +194,7 @@ const EntriesEmployeesColumnThree = (props) => {
               </div>
               <div className="bg-white-A700 flex flex-1 md:flex-1 flex-col items-start justify-start rounded-lg w-auto md:w-full">
                 <div className="flex flex-col items-start justify-start p-1 rounded-lg w-full">
-                  <div className="flex flex-col items-start justify-start w-[280px]">
+                  <div className="flex flex-col items-start justify-start w-[250px]">
                     <div className="flex flex-col gap-2 items-start justify-start w-full">
                       <div className="flex flex-col items-start justify-start px-1 w-full">
                         <Text
@@ -226,7 +226,7 @@ const EntriesEmployeesColumnThree = (props) => {
               </div>
               <div className="bg-white-A700 flex flex-1 md:flex-1 flex-col items-start justify-start rounded-lg w-auto md:w-full">
                 <div className="flex flex-col items-start justify-start p-1 rounded-lg w-full">
-                  <div className="flex flex-col items-start justify-start w-[280px]">
+                  <div className="flex flex-col items-start justify-start w-[250px]">
                     <div className="flex flex-col gap-2 items-start justify-start w-full">
                       <div className="flex flex-col items-start justify-start px-1 w-full">
                         <Text

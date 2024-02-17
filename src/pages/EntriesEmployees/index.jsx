@@ -137,7 +137,7 @@ const EntriesEmployeesPage = () => {
     <>
       <div className="bg-white-A700 flex font-plusjakartasans mx-auto relative min-w-full max-w-full overflow-auto ">
         <Sidebar
-          className={`"!sticky !w-[356px] bg-white-A700 flex h-screen xs:hidden justify-start my-auto overflow-hidden top-[0]" ${
+          className={`"!sticky  bg-white-A700 flex h-screen xs:hidden justify-start my-auto overflow-hidden top-[0]" ${
             toggleMenu ? "menu-close" : "menu-open"
           }`}
         >
@@ -267,9 +267,9 @@ const EntriesEmployeesPage = () => {
                 alt="arrowright"
               />
             )}
-            className="flex flex-col font-inter items-center justify-start mb-[89px] pl-4 sm:pr-5 pr-8 pt-[17px] w-[87%]"
+            className="flex flex-col font-inter items-center justify-start mb-[89px] pl-3 sm:pr-5 pr-0 pt-[17px]"
           >
-            <div className="flex flex-col items-center justify-start pb-[9px] w-full">
+            <div className="flex flex-col items-center justify-start pb-[9px]">
               <SubMenu
                 icon={
                   <Img
@@ -522,11 +522,11 @@ const EntriesEmployeesPage = () => {
               </SubMenu>
             </div>
             <Img
-              className="h-px w-[308px]"
+              className="h-px"
               src="images/img_scrollbar.svg"
               alt="scrollbar"
             />
-            <div className="flex flex-col items-center justify-end mt-[25px] w-full">
+            <div className="flex flex-col items-center justify-end mt-[25px]">
               <MenuItem
                 icon={
                   <Img
