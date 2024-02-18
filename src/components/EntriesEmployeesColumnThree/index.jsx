@@ -30,12 +30,21 @@ const topOptionsList3 = [
   { label: "Option3", value: "option3" },
 ];
 
-const EntriesEmployeesColumnThree = (props) => {
+const EntriesEmployeesColumnThree = ({
+  className,
+  title,
+  onClick,
+  label,
+  label1,
+  label2,
+  label3,
+  addNewProduct,
+}) => {
   const [topvalue, setTopvalue] = React.useState("");
 
   return (
     <>
-      <div className={props.className}>
+      <div className={className}>
         <div className="flex flex-col gap-6 items-start justify-center w-full">
           <div className="flex md:flex-col flex-row gap-0 h-[60px] md:h-auto items-center justify-start">
             <div className="flex md:flex-1 md:flex-col flex-row gap-9 items-center justify-start w-auto md:w-full">
@@ -44,7 +53,7 @@ const EntriesEmployeesColumnThree = (props) => {
                   className="sm:text-2xl md:text-[16px] text-[16px] text-blue_gray-700 w-auto"
                   size="txtInterMedium28"
                 >
-                  {props?.title}
+                  {title}
                 </Text>
               </div>
               <div className="flex md:flex-col flex-row gap-3 items-center justify-start w-auto md:w-full">
@@ -107,6 +116,7 @@ const EntriesEmployeesColumnThree = (props) => {
             <div className="flex flex-1 flex-col items-center justify-end w-full">
               <div className="flex flex-col items-center justify-end w-auto">
                 <Button
+                  onClick={onClick}
                   className="bg-blue_gray-900 cursor-pointer flex items-center justify-center px-3 py-[11px] rounded-lg"
                   rightIcon={
                     <Img
@@ -117,7 +127,7 @@ const EntriesEmployeesColumnThree = (props) => {
                   }
                 >
                   <div className="font-inter font-normal sm:px-0 text-center text-sm text-white-A700">
-                    {props?.addNewProduct}
+                    {addNewProduct}
                   </div>
                 </Button>
               </div>
@@ -137,7 +147,7 @@ const EntriesEmployeesColumnThree = (props) => {
                           className="text-blue_gray-200 text-sm w-auto"
                           size="txtInterRegular14"
                         >
-                          {props?.label}
+                          {label}
                         </Text>
                       </div>
                       <SelectBox
@@ -169,7 +179,7 @@ const EntriesEmployeesColumnThree = (props) => {
                           className="text-blue_gray-200 text-sm w-auto"
                           size="txtInterRegular14"
                         >
-                          {props?.label1}
+                          {label1}
                         </Text>
                       </div>
                       <SelectBox
@@ -201,7 +211,7 @@ const EntriesEmployeesColumnThree = (props) => {
                           className="text-blue_gray-200 text-sm w-auto"
                           size="txtInterRegular14"
                         >
-                          {props?.label2}
+                          {label2}
                         </Text>
                       </div>
                       <SelectBox
@@ -233,7 +243,7 @@ const EntriesEmployeesColumnThree = (props) => {
                           className="text-blue_gray-200 text-sm w-auto"
                           size="txtInterRegular14"
                         >
-                          {props?.label3}
+                          {label3}
                         </Text>
                       </div>
                       <SelectBox

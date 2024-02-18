@@ -45,7 +45,24 @@ const topOptionsList3 = [
 
 const EntriesEmployeesPage = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    console.log("handleButtonClick clicked!", isModalOpen);
+    setIsModalOpen(!isModalOpen);
+  };
+
   const tableData = React.useRef([
+    {
+      employeeusernamOne: "Employee Full Name",
+      pklnumber: "images/img_edit_blue_gray_200.svg",
+      customername: "Block",
+    },
+    {
+      employeeusernamOne: "Employee Full Name",
+      pklnumber: "images/img_edit_blue_gray_200.svg",
+      customername: "Block",
+    },
     {
       employeeusernamOne: "Employee Full Name",
       pklnumber: "images/img_edit_blue_gray_200.svg",
@@ -561,7 +578,11 @@ const EntriesEmployeesPage = () => {
         {/* overflow-hidden */}
         <div className="flex flex-col font-inter h-screen items-center justify-start max-w-full p-5 w-full z-[1]  ">
           <div className="bg-gray-50 flex flex-col gap-6 h-[1060px] md:h-auto items-start justify-start p-6 sm:px-5 rounded-[24px">
-            <EntriesEmployeesColumnThree className="bg-white-A700 flex flex-col gap-8 items-start justify-center p-5 rounded-[16px]" />
+            <EntriesEmployeesColumnThree
+              onClick={handleButtonClick}
+              // handleToggleModal={() => {setIsModalOpen(!isModalOpen)}}
+              className="bg-white-A700 flex flex-col gap-8 items-start justify-center p-5 rounded-[16px]"
+            />
             <div className="flex flex-col items-start justify-start min-w-full  ">
               <div className="bg-white-A700 flex flex-col md:h-auto items-start justify-end p-5 sm:px-5 rounded-[16px] min-w-full">
                 <div className="min-w-full">
@@ -577,6 +598,134 @@ const EntriesEmployeesPage = () => {
           </div>
         </div>
       </div>
+
+      {isModalOpen ? (
+        <div className="modal fixed top-[5%] left-[30%] z-10 min-w-[45vw] rounded-xl bg-white-A700 p-6 mx-auto flex items-center justify-center">
+          <div className="flex flex-col items-start justify-start w-full">
+            <div className="flex items-center justify-between w-full">
+              <span className="text-gray font-medium text-[16px]">Add New</span>
+              <button className=" bg-gray-200 flex items-center justify-center py-1 px-2 rounded-md text-xs font-light text-white-A700">
+                x
+              </button>
+            </div>
+            <div className="flex flex-col items-center gap-5 my-5  w-full">
+              <div className="flex items-center gap-5 w-full">
+                <Input
+                  name="top"
+                  placeholder="User Name"
+                  className="font-inter leading-[normal] p-0 placeholder:text-blue_gray-200 text-base text-blue_gray-200 text-left w-full"
+                  wrapClassName="bg-gray-50 flex px-4 py-3 rounded-lg w-full"
+                ></Input>
+                <Input
+                  name="top"
+                  placeholder="Phone Number"
+                  className="font-inter leading-[normal] p-0 placeholder:text-blue_gray-200 text-base text-blue_gray-200 text-left w-full"
+                  wrapClassName="bg-gray-50 flex px-4 py-3 rounded-lg w-full"
+                ></Input>
+              </div>
+
+              <div className="flex items-center gap-5 w-full">
+                <Input
+                  name="top"
+                  placeholder="User Name"
+                  className="font-inter leading-[normal] p-0 placeholder:text-blue_gray-200 text-base text-blue_gray-200 text-left w-full"
+                  wrapClassName="bg-gray-50 flex px-4 py-3 rounded-lg w-full"
+                ></Input>
+                <Input
+                  name="top"
+                  placeholder="Phone Number"
+                  className="font-inter leading-[normal] p-0 placeholder:text-blue_gray-200 text-base text-blue_gray-200 text-left w-full"
+                  wrapClassName="bg-gray-50 flex px-4 py-3 rounded-lg w-full"
+                ></Input>
+              </div>
+
+              <div className="flex items-center gap-5 w-full">
+                <Input
+                  name="top"
+                  placeholder="User Name"
+                  className="font-inter leading-[normal] p-0 placeholder:text-blue_gray-200 text-base text-blue_gray-200 text-left w-full"
+                  wrapClassName="bg-gray-50 flex px-4 py-3 rounded-lg w-full"
+                ></Input>
+                <Input
+                  name="top"
+                  placeholder="Phone Number"
+                  className="font-inter leading-[normal] p-0 placeholder:text-blue_gray-200 text-base text-blue_gray-200 text-left w-full"
+                  wrapClassName="bg-gray-50 flex px-4 py-3 rounded-lg w-full"
+                ></Input>
+              </div>
+
+              <div className="flex items-center gap-5 w-full">
+                <Input
+                  name="top"
+                  placeholder="User Name"
+                  className="font-inter leading-[normal] p-0 placeholder:text-blue_gray-200 text-base text-blue_gray-200 text-left w-full"
+                  wrapClassName="bg-gray-50 flex px-4 py-3 rounded-lg w-full"
+                ></Input>
+                <Input
+                  name="top"
+                  placeholder="Phone Number"
+                  className="font-inter leading-[normal] p-0 placeholder:text-blue_gray-200 text-base text-blue_gray-200 text-left w-full"
+                  wrapClassName="bg-gray-50 flex px-4 py-3 rounded-lg w-full"
+                ></Input>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between w-full mt-6">
+              <span className="text-gray font-medium text-[16px]">
+                User permissions
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-5 my-5 w-full">
+              <div className="flex items-center gap-5 w-full">
+                <Input
+                  name="top"
+                  placeholder="User Name"
+                  className="font-inter leading-[normal] p-0 placeholder:text-blue_gray-200 text-base text-blue_gray-200 text-left w-full"
+                  wrapClassName="bg-gray-50 flex px-4 py-3 rounded-lg w-full"
+                ></Input>
+                <Input
+                  name="top"
+                  placeholder="Phone Number"
+                  className="font-inter leading-[normal] p-0 placeholder:text-blue_gray-200 text-base text-blue_gray-200 text-left w-full"
+                  wrapClassName="bg-gray-50 flex px-4 py-3 rounded-lg w-full"
+                ></Input>
+              </div>
+
+              <div className="flex items-center gap-5 w-full">
+                <Input
+                  name="top"
+                  placeholder="User Name"
+                  className="font-inter leading-[normal] p-0 placeholder:text-blue_gray-200 text-base text-blue_gray-200 text-left w-full"
+                  wrapClassName="bg-gray-50 flex px-4 py-3 rounded-lg w-full"
+                ></Input>
+                <Input
+                  name="top"
+                  placeholder="Phone Number"
+                  className="font-inter leading-[normal] p-0 placeholder:text-blue_gray-200 text-base text-blue_gray-200 text-left w-full"
+                  wrapClassName="bg-gray-50 flex px-4 py-3 rounded-lg w-full"
+                ></Input>
+              </div>
+
+              <div className="flex items-center justify-end w-full gap-2 mt-3">
+                <div
+                  className="px-5 py-3 text-center rounded-lg bg-gray-200"
+                  onClick={handleButtonClick}
+                >
+                  Back
+                </div>
+                <div
+                  className="px-9 py-3 text-center rounded-lg bg-black text-white-A700"
+                  onClick={handleButtonClick}
+                >
+                  Save Changes
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
     </>
   );
 };
