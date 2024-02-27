@@ -153,6 +153,7 @@ const EntriesEmployeesPage = () => {
   return (
     <>
       <div className="bg-white-A700 flex font-plusjakartasans mx-auto relative min-w-full max-w-full overflow-auto ">
+        {/* Sid Bar */}
         <Sidebar
           className={`"!sticky  bg-white-A700 flex h-screen xs:hidden justify-start my-auto overflow-hidden top-[0]" ${
             toggleMenu ? "menu-close" : "menu-open"
@@ -586,12 +587,12 @@ const EntriesEmployeesPage = () => {
             <div className="flex flex-col items-start justify-start min-w-full  ">
               <div className="bg-white-A700 flex flex-col md:h-auto items-start justify-end p-5 sm:px-5 rounded-[16px] min-w-full">
                 <div className="min-w-full">
-                  <ReactTable
+                  {/* <ReactTable
                     columns={tableColumns}
                     data={tableData.current}
                     rowClass={"bg-white-A700 border border-gray-50"}
                     headerClass="bg-white-A700 border border-gray-50"
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
