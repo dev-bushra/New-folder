@@ -54,8 +54,8 @@ const Login = () => {
             ></Input>
           </div>
         </div>
-        <Button className="bg-blue_gray-900 cursor-pointer p-4 font-inter flex items-center justify-between rounded-lg">
-          <span className="text-[#fff] text-[16px] font-normal font-inter">
+        <Button className="bg-blue_gray-900 cursor-pointer p-4 px-6 font-inter flex items-center justify-between rounded-lg">
+          <span className="text-[#fff] text-[14px] font-normal font-inter">
             Login
           </span>
           <IoIosArrowForward color="#fff" size={18} />
