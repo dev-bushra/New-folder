@@ -46,9 +46,11 @@ const Login = () => {
               Password
             </span>
             <Input
+              type="password"
               name="top"
               placeholder="Enter  your password"
               label={false}
+              eyeIcon={true}
               className="font-inter leading-[normal] p-0 placeholder:text-blue_gray-200 text-base text-blue_gray-200 text-left w-full"
               wrapClassName="bg-gray-50 flex px-4 py-3 rounded-lg w-full"
             ></Input>
