@@ -34,10 +34,7 @@ const Input = React.forwardRef(
     return (
       <>
         <div
-          className={`${wrapClassName} 
-               
-               
-              `}
+          className={`${wrapClassName}`}
         >
           {!!label && label}
           {!!prefix && prefix}
