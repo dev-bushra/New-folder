@@ -4,8 +4,18 @@ import { Link } from "react-router-dom";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
 import { Button, Img, List, SelectBox, Text } from "components";
+import { useSelector, useDispatch } from "react-redux";
 
 const Login = () => {
+  const count = useSelector((state) => state.counter.count);
+  console.log(count);
+
+  const dispatch = useDispatch();
+
+  const incrementCounter = () => {
+    dispatch({ type: "INCREMENT_COUNTER" });
+  };
+
   const [username, setUsername] = useState("");
   const [userCompany, setUserCompany] = useState("");
   const [password, setPassword] = useState("");
@@ -13,6 +23,7 @@ const Login = () => {
   const [isFieldsFiled, setIsFieldsFiled] = useState(false);
   const [userLoggedInSuccessfully, setUserLoggedInSuccessfully] = useState(false);
 
+  // check if username and password field are filed by the user
   const handleCheckingIfAllFieldsfiled = () => {
     if(username.trim() === "" || password.trim() === "") {
       setIsFieldsFiled(false)
@@ -23,6 +34,7 @@ const Login = () => {
     }
   }
 
+  // watch username and password fields
   useEffect(() => {
     handleCheckingIfAllFieldsfiled();
   }, [username, password]);
@@ -34,38 +46,17 @@ const Login = () => {
       // Check user input validation
       // Hit the login endpoint to get the token 
       // If token valid save it in the store
-      let response = await fetch("/api/users/login",{
-        method: 'POST',
-        headers:{
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            username: username,
-            password: password
-        })
-      });
-
-      if(!response.ok){
-        throw new Error('Server Response Not OK');
-      }
-      
-      let data = await response.json();
-      // localStorage.setItem('token',data.token); // save token in local store
-      // props.handleToken(data.token);
-      // window.location.replace('/dashboard')
-      // dispatch(setUsername(response.data.user.username));
     } catch (error) {
       // if user username or password is wrong show  error message
-      console.log("Error in login : ", error);
       setUserLoggedInFailed(true);
     }
   };
       
   // Route user to his dashboard 
   const handleMoveUserToHisDashboard = async () => {
-    console.log('user logging in..');
     if (userLoggedInSuccessfully) {
       window.location.href = "/home"
+      // history.push("/home");
     }
   }
 
@@ -75,8 +66,9 @@ const Login = () => {
         {/* Text */}
         <h1 className="sm:hidden lg:block text-[#fff] text-[62px] font-bold font-inter">
           Have a great day <br />
-          at work! : )
+          at work! : ) {count}
         </h1>
+        {/* <button onClick={incrementCounter}>incrementCounter</button> */}
         {/* <div className="flex flex-col absolute bottom-5 md:hidden left-7">
           <div className="flex text-[#fff] font-inter text-[30px]">
             <h1 className="font-bold">AGS</h1>

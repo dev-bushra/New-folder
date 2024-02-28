@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { Menu, MenuItem, Sidebar, SubMenu } from "react-pro-sidebar";
 
 import { createColumnHelper } from "@tanstack/react-table";
+import { useSelector, useDispatch } from "react-redux";
+
 
 import {
   Button,
@@ -151,10 +153,13 @@ const Home = () => {
 
   const [topvalue, setTopvalue] = React.useState("");
 
+  const count = useSelector((state) => state.counter.count);
+  console.log(count);
+
   return (
     <div className="w-full grid grid-cols-12 h-screen bg-[#fff]">
       {/*  ## LeftSide - SideBar ##  */}
-      <h1 className="sm:hidden col-span-2 bg-[#fff]">SideNav</h1>
+      <h1 className="sm:hidden col-span-2 bg-[#fff]">SideNav {count}</h1>
 
       {/*  ## RightSide - Filter ##  */}
       <div className="sm:col-span-10 col-span-10 bg-[#F8F9FA] mt-3 mr-3 rounded-tl-[24px] rounded-tr-[24px] p-[24px]">
