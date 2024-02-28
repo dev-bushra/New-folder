@@ -66,7 +66,7 @@ const Login = () => {
         {/* Text */}
         <h1 className="sm:hidden lg:block text-[#fff] text-[62px] font-bold font-inter">
           Have a great day <br />
-          at work! : ) {count}
+          at work! : ) 
         </h1>
         {/* <button onClick={incrementCounter}>incrementCounter</button> */}
         {/* <div className="flex flex-col absolute bottom-5 md:hidden left-7">
