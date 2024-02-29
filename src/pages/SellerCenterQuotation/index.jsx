@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { Menu, MenuItem, Sidebar, SubMenu } from "react-pro-sidebar";
+import SellerCenterQuotationForm from "components/Sections/SellerCenterQuotationForm";
 
 import { createColumnHelper } from "@tanstack/react-table";
 import { useSelector, useDispatch } from "react-redux";
+import SellerCenterQuotationProductsCards from "../../components/Cards/SellerCenterQuotationProductsCards";
 
-import HomeProductsCards from "../components/Cards/HomeProductsCards";
 import {
   Button,
   Img,
@@ -16,6 +17,8 @@ import {
   SelectBox,
   Text,
 } from "components";
+
+import SalerTable from "../../components/Table/salerTable";
 import EntriesEmployeesColumnThree from "components/EntriesEmployeesColumnThree";
 
 // import { CloseSVG } from "../../assets/images";
@@ -46,7 +49,7 @@ const topOptionsList3 = [
   { label: "Option3", value: "option3" },
 ];
 
-const Home = () => {
+const SellerCenterQuotation = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -89,7 +92,7 @@ const Home = () => {
             className="p-3 text-blue_gray-600 text-sm"
             size="txtInterRegular18"
           >
-            Employee User Name
+            No
           </Text>
         ),
       }),
@@ -164,22 +167,18 @@ const Home = () => {
 
       {/*  ## RightSide - Filter ##  */}
       <div className="sm:col-span-10 col-span-10 bg-[#F8F9FA] mt-3 mr-3 rounded-tl-[24px] rounded-tr-[24px] p-[24px]">
-        {/* 1- Filter  */}
         <EntriesEmployeesColumnThree
           onClick={handleButtonClick}
-          // handleToggleModal={() => {setIsModalOpen(!isModalOpen)}}
           className="bg-white-A700 flex flex-col gap-8 items-start justify-center p-5 rounded-[16px]"
         />
-
-        {/* 2- Card */}
         <div className="cards-wrapper w-full flex  flex-wrap gap-5 mt-5">
           {Array.from({ length: numberOfCards }, (_, index) => (
-            <HomeProductsCards key={index} />
+            <SellerCenterQuotationProductsCards key={index} />
           ))}
         </div>
-        
+        {/* <SellerCenterQuotationForm /> */}
       </div>
     </div>
   );
 };
-export default Home;
+export default SellerCenterQuotation;

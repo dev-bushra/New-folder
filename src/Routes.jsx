@@ -5,6 +5,9 @@ import Home from "pages/Home";
 import NotFound from "pages/NotFound";
 
 const EntriesEmployees = React.lazy(() => import("pages/EntriesEmployees"));
+const SellerCenterQuotation = React.lazy(() =>
+  import("pages/SellerCenterQuotation")
+);
 
 const ProjectRoutes = () => {
   return (
@@ -15,6 +18,10 @@ const ProjectRoutes = () => {
           <Route path="/home" element={<Home />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/entriesemployees" element={<EntriesEmployees />} />
+          <Route
+            path="/sellercenterquotation"
+            element={<SellerCenterQuotation />}
+          />
         </Routes>
       </Router>
     </React.Suspense>
